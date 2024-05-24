@@ -1,6 +1,9 @@
 package com.pardys.pardysback.post.dto;
 
 
+import com.pardys.pardysback.image.dto.ImageDataCreateDTO;
+import com.pardys.pardysback.image.dto.ImageDataReadDTO;
+import com.pardys.pardysback.image.entity.ImageData;
 import com.pardys.pardysback.post.entity.Post;
 import lombok.Getter;
 
@@ -13,6 +16,7 @@ public class PostCreateDTO {
     private String learned;     // 2. 실패를 겪으며 배운 점을 작성해주세요
     private String lacked;      // 3. 실패를 겪으며 깨달은 나의 부족한 부분을 작성해주세요
     private String longedFor;   // 4. 이 실패를 더 겪지 않으려면, 뭘 더 하면 좋을까요?
+    private ImageDataCreateDTO imageDataCreateDTO;
 
 
     public Post toEntity() {
@@ -24,6 +28,7 @@ public class PostCreateDTO {
                 .learned(this.getLearned())
                 .lacked(this.getLacked())
                 .longedFor(this.getLongedFor())
+                .imageData(this.imageDataCreateDTO.toEntity())
                 .build();
     }
 }

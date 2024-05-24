@@ -1,5 +1,7 @@
 package com.pardys.pardysback.post.dto;
 
+import com.pardys.pardysback.image.dto.ImageDataReadDTO;
+import com.pardys.pardysback.image.entity.ImageData;
 import com.pardys.pardysback.post.entity.Post;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,6 +26,9 @@ public class PostReadDTO {
 
     private String longedFor;   // 4. 이 실패를 더 겪지 않으려면, 뭘 더 하면 좋을까요?
 
+    private ImageDataReadDTO imageDataReadDTO;
+
+
     public PostReadDTO(Post post) {
         this.id = post.getId();
         this.title = post.getTitle();
@@ -33,6 +38,7 @@ public class PostReadDTO {
         this.learned = post.getLearned();
         this.lacked = post.getLacked();
         this.longedFor = post.getLongedFor();
+        this.imageDataReadDTO = post.getImageData().toDTO();
     }
 
     public Post toEntity() {
@@ -41,10 +47,11 @@ public class PostReadDTO {
                 .title(this.getTitle())
                 .category(this.getCategory())
                 .painter(this.getPainter())
-                .expLanation(this.expLanation)
-                .learned(this.learned)
-                .lacked(this.lacked)
-                .longedFor(this.longedFor)
+                .expLanation(this.getExpLanation())
+                .learned(this.getLearned())
+                .lacked(this.getLacked())
+                .longedFor(this.getLongedFor())
+                .imageData(this.getImageDataReadDTO().toEntity())
                 .build();
     }
 }

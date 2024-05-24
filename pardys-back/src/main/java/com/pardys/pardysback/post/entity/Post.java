@@ -1,11 +1,8 @@
 package com.pardys.pardysback.post.entity;
 
-
+import com.pardys.pardysback.image.entity.ImageData;
 import com.pardys.pardysback.post.dto.PostReadDTO;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -37,6 +34,10 @@ public class Post {
 
     private String longedFor;   // 4. 이 실패를 더 겪지 않으려면, 뭘 더 하면 좋을까요?
 
+    @OneToOne
+//    @JoinColumn(nullable = false ,name = "image")
+    private ImageData imageData;
+
     public PostReadDTO toDTO(){
         return PostReadDTO.builder()
                 .id(this.getId())
@@ -47,7 +48,7 @@ public class Post {
                 .learned(this.getLearned())
                 .lacked(this.getLacked())
                 .longedFor(this.getLongedFor())
+                .imageDataReadDTO(this.getImageData().toEntity().toDTO())
                 .build();
     }
-
 }

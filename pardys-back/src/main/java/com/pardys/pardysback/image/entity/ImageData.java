@@ -30,12 +30,13 @@ public class ImageData {
     @Column(name = "imagedata", length = 20000000)
     private byte[] imageData;
 
-    public ImageData toEntity(ImageDataCreateDTO dto){
+    public ImageData toEntity(/*ImageDataCreateDTO dto*/){
         return ImageData.builder()
-                .name(dto.getName())
-                .type(dto.getType())
-                .imageData(dto.getImageData())
+                .name(this.getName())
+                .type(this.getType())
+                .imageData(this.getImageData())
                 .build();
+
 //        return ImageData.builder()
 //                .name(dto.getName())
 //                .type(dto.getType())
@@ -43,12 +44,17 @@ public class ImageData {
 //                .build();
     }
 
+//    public ImageDataReadDTO toDTO() {
+//
+//
+//    }
 
-//    public ImageDataReadDTO toDTO(){
-//        return ImageDataReadDTO.builder()
+
+    public ImageDataReadDTO toDTO(){
+        return ImageDataReadDTO.builder()
 //                .name(this.getName())
 //                .type(this.getType())
-//                .imageData(this.getImageData())
-//                .build();
-//    }
+                .imageData(this.getImageData())
+                .build();
+    }
 }

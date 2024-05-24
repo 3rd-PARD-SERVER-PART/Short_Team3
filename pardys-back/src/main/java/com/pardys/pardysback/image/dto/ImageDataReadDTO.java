@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ImageDataReadDTO {
     private Long id;
-
     private String name;
     private String type;
     private byte[] imageData;
@@ -27,5 +26,11 @@ public class ImageDataReadDTO {
                 .build();
     }
 
-
+    public ImageData toEntity() {
+        return ImageData.builder()
+                .name(this.getName())
+                .type(this.getType())
+                .imageData(this.getImageData())
+                .build();
+    }
 }

@@ -52,6 +52,7 @@ public class ImageDataService {
 
 //    @Transactional
     public byte[] getImage(Long id) {
+
         System.out.println("in id get image by service 1");
         ImageData dbImage = imageDataRepo.findById(id).orElseThrow();
         System.out.println("in id get image by service 2");

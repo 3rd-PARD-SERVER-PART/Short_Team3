@@ -20,9 +20,7 @@ public class PostController {
     @PostMapping("")
     public String createPost(@RequestBody PostCreateDTO postCreateDTO) {
         postService.createPost(postCreateDTO);
-
-
-        return postCreateDTO.getTitle();
+        return "done";
     }
 
     //-------------------------------------------------
