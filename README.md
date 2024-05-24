@@ -22,6 +22,7 @@ API
 <br/>
 One of the most important things in an API is how it returns response codes. Each response code means a different thing and consumers of your API rely heavily on these codes.
 <br/>
+
 | Code  | Title                     | Description                              |
 | ----- | ------------------------- | ---------------------------------------- |
 | `200` | `OK`                      | When a request was successfully processed (e.g. when using `GET`, `PATCH`, `PUT` or `DELETE`). |
@@ -35,3 +36,4 @@ One of the most important things in an API is how it returns response codes. Eac
 | `422` | `Unprocessable entity`    | Whenever there is something wrong with the request (e.g. missing parameters, validation errors) even though the syntax is correct (ie. `400` is not warranted). |
 | `500` | `Internal server error`   | When an internal error has happened (e.g. when trying to add/update records in the database fails). |
 | `502` | `Bad Gateway`             | When a necessary third party service is down. |
+
