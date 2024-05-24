@@ -28,9 +28,7 @@ We don't believe that bigger is better. Big APIs, large complexities, and long f
 | `GET`    | `/image/info/{id}` | Retrieve info(filename, filetype) about image #id |
 
 ## Swagger
-![](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhdyj4332wqbewtxgyjbz.gif)
-
-<div style="width:480px"><iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/wp0qAbtr5M6Z1wfHAZ/video" width="480"></iframe></div>
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3k1ZWxtZDJiOGlleTdidnpobDQ1NDRmY3N5endnaGF4eXMzNzRybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/wp0qAbtr5M6Z1wfHAZ/giphy.gif)
 
 <br/>
 #### Link-to-Swagger: http://[ip-address]:8080/swagger-ui/index.html#/
