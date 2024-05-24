@@ -1,8 +1,19 @@
 # Short_Team3
 
 Team3: Pardys BE Repository
+
+## Philosophy
+We believe using technology should be fun and light, not stern and stressful. It's cool to be user-friendly; using complicated jargon without explanations doesn't make for better results – if anything, it scares people off. We don't want to be intimidating, we want to be inviting and enjoyable, and then casually be the best choice around. Real casually.
+
+We offer a simple API that allows users to perform CRUD operations, letting their inner voices be heard, post pictures, and view them. Our goal is to make the web a place where sharing and connecting is seamless and delightful.
+
+We believe frameworks should be disposable and components recyclable. We don't want a web where walled gardens jealously compete with one another. By making interoperability the norm, switching from one framework to another becomes frictionless. Our design is modest; we don't expect it to be top of the class forever, so we've made it as easy to discard as it is to adopt.
+
+We don't believe that bigger is better. Big APIs, large complexities, and long files – we see them as omens of impending user complexity. We want everyone on a team, no matter the size, to fully understand how an application is laid out. And once an application is built, we want it to be small, performant, and easy to understand. All of which makes for easy-to-debug code, better results, and super smiley faces.
+
+
 <br/>
-API
+## API
 <br/>
 
 | Method   | URL                                      | Description                              |
