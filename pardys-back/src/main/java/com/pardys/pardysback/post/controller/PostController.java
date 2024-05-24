@@ -18,9 +18,11 @@ public class PostController {
     //-------------------------------------------------
     // create
     @PostMapping("")
-    public String createPost(PostCreateDTO postCreateDTO) {
+    public String createPost(@RequestBody PostCreateDTO postCreateDTO) {
         postService.createPost(postCreateDTO);
-        return "완료";
+
+
+        return postCreateDTO.getTitle();
     }
 
     //-------------------------------------------------
