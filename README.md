@@ -27,6 +27,11 @@ We don't believe that bigger is better. Big APIs, large complexities, and long f
 | `GET`    | `/image/{id}` | Retrieve image #id |
 | `GET`    | `/image/info/{id}` | Retrieve info(filename, filetype) about image #id |
 
+## Swagger
+[Link-to-Swagger](http://[ip-address]:8080/swagger-ui/index.html#/)
+![](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhdyj4332wqbewtxgyjbz.gif)
+
+
 
 ## HTTP Response Status Codes
 <br/>
