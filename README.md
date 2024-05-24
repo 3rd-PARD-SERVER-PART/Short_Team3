@@ -29,6 +29,7 @@ We don't believe that bigger is better. Big APIs, large complexities, and long f
 
 ## Swagger
 ![](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fhdyj4332wqbewtxgyjbz.gif)
+<div style="width:100%"><div style="height:0;padding-bottom:56.25%;position:relative;width:100%"><iframe allowfullscreen="" frameBorder="0" height="100%" src="https://giphy.com/embed/wp0qAbtr5M6Z1wfHAZ/video" style="left:0;position:absolute;top:0" width="100%"></iframe></div></div>
 <br/>
 #### Link-to-Swagger: http://[ip-address]:8080/swagger-ui/index.html#/
 
