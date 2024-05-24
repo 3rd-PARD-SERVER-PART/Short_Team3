@@ -20,10 +20,8 @@ public class User {
     private Long id; // 아이디 자동으로 증가함
 
     private String name;
+//    private String ;
 
-    private String part;
-
-    private int age;
 
 
 
