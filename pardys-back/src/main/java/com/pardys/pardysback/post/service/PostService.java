@@ -1,5 +1,7 @@
 package com.pardys.pardysback.post.service;
 
+import com.pardys.pardysback.image.entity.ImageData;
+import com.pardys.pardysback.image.repo.ImageDataRepo;
 import com.pardys.pardysback.post.dto.PostCreateDTO;
 import com.pardys.pardysback.post.dto.PostReadDTO;
 
@@ -10,6 +12,7 @@ import com.pardys.pardysback.post.dto.PostUpdateDTO;
 import com.pardys.pardysback.post.entity.Post;
 import com.pardys.pardysback.post.repo.PostRepo;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.stream.Collectors;
@@ -18,6 +21,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class PostService {
     private final PostRepo postRepo;
+    private final ImageDataRepo imageDataRepo;
 
     public List<PostReadDTO> readAll() {
         return postRepo.findAll()
@@ -27,7 +31,8 @@ public class PostService {
     }
 
     public void createPost(PostCreateDTO postCreateDTO) {
-        postRepo.save(postCreateDTO.toEntity());
+        ImageData image = imageDataRepo.findById(postCreateDTO.getImageId()).orElseThrow();
+        postRepo.save(postCreateDTO.toEntity(image));
     }
 
 

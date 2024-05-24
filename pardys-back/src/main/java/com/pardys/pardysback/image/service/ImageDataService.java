@@ -23,17 +23,39 @@ public class ImageDataService {
     @Autowired
     private ImageDataRepo imageDataRepo;
 
-    public String uploadImage(MultipartFile file) throws IOException {
+//    public String uploadImage(MultipartFile file) throws IOException {
+//
+//        imageDataRepo.save(ImageData.builder()
+//                .name(file.getOriginalFilename())
+//                .type(file.getContentType())
+//                .imageData(ImageUtil.compressImage(file.getBytes())).build());
+//
+//        return new String("Image uploaded successfully: " +
+//                file.getOriginalFilename());
+//
+//    }
 
-        imageDataRepo.save(ImageData.builder()
+
+    public Long uploadImage(MultipartFile file) throws IOException {
+        ImageData savedImage = imageDataRepo.save(ImageData.builder()
                 .name(file.getOriginalFilename())
                 .type(file.getContentType())
-                .imageData(ImageUtil.compressImage(file.getBytes())).build());
+                .imageData(ImageUtil.compressImage(file.getBytes()))
+                .build());
 
-        return new String("Image uploaded successfully: " +
-                file.getOriginalFilename());
-
+        return savedImage.getId();
     }
+
+//    public Integer uploadImage(MultipartFile file) throws IOException {
+//
+//        imageDataRepo.save(ImageData.builder()
+//                .name(file.getOriginalFilename())
+//                .type(file.getContentType())
+//                .imageData(ImageUtil.compressImage(file.getBytes())).build());
+//
+//        return new Integer(1);
+//
+//    }
 
 //    @Transactional
     public ImageDataReadDTO getInfoByImageById(Long id) {
