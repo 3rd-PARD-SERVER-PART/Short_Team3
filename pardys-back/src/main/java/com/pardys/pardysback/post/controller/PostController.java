@@ -18,9 +18,11 @@ public class PostController {
     //-------------------------------------------------
     // create
     @PostMapping("")
-    public String createPost(PostCreateDTO postCreateDTO) {
+    public String createPost(@RequestBody PostCreateDTO postCreateDTO) {
         postService.createPost(postCreateDTO);
-        return "완료";
+
+
+        return postCreateDTO.getTitle();
     }
 
     //-------------------------------------------------
@@ -28,6 +30,10 @@ public class PostController {
     @GetMapping("")
     public List<PostReadDTO> readAll() {
         return postService.readAll();
+    }
+    @GetMapping("category/{category}")
+    public List<PostReadDTO> readAll(@PathVariable Integer category) {
+        return postService.readByCategory(category);
     }
 
     @GetMapping("/{id}")

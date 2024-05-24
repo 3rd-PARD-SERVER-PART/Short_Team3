@@ -2,15 +2,9 @@ package com.pardys.pardysback.post.dto;
 
 
 import com.pardys.pardysback.post.entity.Post;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Getter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class PostCreateDTO {
     private String title;
     private Integer category;

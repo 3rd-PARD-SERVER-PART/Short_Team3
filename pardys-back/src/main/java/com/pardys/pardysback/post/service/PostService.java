@@ -44,4 +44,11 @@ public class PostService {
     public PostReadDTO readById(Long id) {
         return postRepo.findById(id).get().toDTO();
     }
+
+    public List<PostReadDTO> readByCategory(Integer category) {
+        return postRepo.findByCategory(category)
+                .stream()
+                .map(PostReadDTO::new)
+                .collect(Collectors.toList());
+    }
 }
