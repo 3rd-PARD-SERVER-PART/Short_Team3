@@ -12,9 +12,8 @@ We believe frameworks should be disposable and components recyclable. We don't w
 We don't believe that bigger is better. Big APIs, large complexities, and long files – we see them as omens of impending user complexity. We want everyone on a team, no matter the size, to fully understand how an application is laid out. And once an application is built, we want it to be small, performant, and easy to understand. All of which makes for easy-to-debug code, better results, and super smiley faces.
 
 
-<br/>
+
 ## API
-<br/>
 
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
