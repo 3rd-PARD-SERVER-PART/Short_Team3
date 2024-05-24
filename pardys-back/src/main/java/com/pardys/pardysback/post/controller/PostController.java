@@ -31,6 +31,10 @@ public class PostController {
     public List<PostReadDTO> readAll() {
         return postService.readAll();
     }
+    @GetMapping("category/{category}")
+    public List<PostReadDTO> readAll(@PathVariable Integer category) {
+        return postService.readByCategory(category);
+    }
 
     @GetMapping("/{id}")
     public PostReadDTO readPost(@PathVariable Long id) {
