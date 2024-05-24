@@ -2,7 +2,8 @@
 
 Team3: Pardys BE Repository
 <br/>
-API\
+API
+<br/>
 
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
