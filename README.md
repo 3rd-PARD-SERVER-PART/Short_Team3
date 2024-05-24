@@ -31,7 +31,6 @@ We don't believe that bigger is better. Big APIs, large complexities, and long f
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3k1ZWxtZDJiOGlleTdidnpobDQ1NDRmY3N5endnaGF4eXMzNzRybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/wp0qAbtr5M6Z1wfHAZ/giphy.gif)
 #### Link-to-Swagger: http://[ip-address]:8080/swagger-ui/index.html#/
 
-<br/>
 ## HTTP Response Status Codes
 <br/>
 One of the most important things in an API is how it returns response codes. Each response code means a different thing and consumers of your API rely heavily on these codes.
