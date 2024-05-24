@@ -1,6 +1,6 @@
-# Short_Team3
+Short_Team3
 
-Team3: Pardys BE Repository
+<h1 align="center">Team3: Pardys BE Repository</h1>
 
 ## Philosophy
 We believe using technology should be fun and light, not stern and stressful. It's cool to be user-friendly; using complicated jargon without explanations doesn't make for better results – if anything, it scares people off. We don't want to be intimidating, we want to be inviting and enjoyable, and then casually be the best choice around. Real casually.
