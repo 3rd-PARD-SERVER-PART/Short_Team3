@@ -27,7 +27,7 @@ public class ImageUtil {
         return outputStream.toByteArray();
     }
 
-//    public static byte[] decompressImage(byte[] data) {
+    //    public static byte[] decompressImage(byte[] data) {
 //        Inflater inflater = new Inflater();
 //        inflater.setInput(data);
 //        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
@@ -45,39 +45,39 @@ public class ImageUtil {
 //        System.out.println("in decompress image by util 3");
 //        return outputStream.toByteArray();
 //    }
-public static byte[] decompressImage(byte[] data) {
-    Inflater inflater = new Inflater();
-    inflater.setInput(data);
-    ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
-    byte[] tmp = new byte[10000000];
-    System.out.println("in decompress image by util 1");
+    public static byte[] decompressImage(byte[] data) {
+        Inflater inflater = new Inflater();
+        inflater.setInput(data);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
+        byte[] tmp = new byte[10000000];
+        System.out.println("in decompress image by util 1");
 
-    try {
-        while (!inflater.finished()) {
-            int count = inflater.inflate(tmp);
-            if (count == 0) {
-                if (inflater.needsInput()) {
-                    System.err.println("Inflater needs more input.");
-                    break;
+        try {
+            while (!inflater.finished()) {
+                int count = inflater.inflate(tmp);
+                if (count == 0) {
+                    if (inflater.needsInput()) {
+                        System.err.println("Inflater needs more input.");
+                        break;
+                    }
+                    if (inflater.needsDictionary()) {
+                        System.err.println("Inflater needs a dictionary.");
+                        break;
+                    }
+                    if (inflater.finished()) {
+                        break;
+                    }
                 }
-                if (inflater.needsDictionary()) {
-                    System.err.println("Inflater needs a dictionary.");
-                    break;
-                }
-                if (inflater.finished()) {
-                    break;
-                }
+                outputStream.write(tmp, 0, count);
             }
-            outputStream.write(tmp, 0, count);
+            System.out.println("in decompress image by util 2");
+            outputStream.close();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        } finally {
+            inflater.end(); // Ensure resources are released
         }
-        System.out.println("in decompress image by util 2");
-        outputStream.close();
-    } catch (Exception exception) {
-        exception.printStackTrace();
-    } finally {
-        inflater.end(); // Ensure resources are released
+        System.out.println("in decompress image by util 3");
+        return outputStream.toByteArray();
     }
-    System.out.println("in decompress image by util 3");
-    return outputStream.toByteArray();
-}
 }

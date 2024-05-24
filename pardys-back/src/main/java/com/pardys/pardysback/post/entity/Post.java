@@ -39,6 +39,7 @@ public class Post {
 //    @JoinColumn(nullable = false ,name = "image")
     private ImageData imageData;
 
+
     public PostReadDTO toDTO(){
         return PostReadDTO.builder()
                 .id(this.getId())

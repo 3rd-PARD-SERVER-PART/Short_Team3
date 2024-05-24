@@ -29,6 +29,9 @@ public class PostReadDTO {
     private ImageDataReadDTO imageDataReadDTO;
 
 
+
+
+
     public PostReadDTO(Post post) {
         this.id = post.getId();
         this.title = post.getTitle();
@@ -40,18 +43,18 @@ public class PostReadDTO {
         this.longedFor = post.getLongedFor();
         this.imageDataReadDTO = post.getImageData().toDTO();
     }
-
-    public Post toEntity() {
-        return Post.builder()
-                .id(this.getId())
-                .title(this.getTitle())
-                .category(this.getCategory())
-                .painter(this.getPainter())
-                .expLanation(this.getExpLanation())
-                .learned(this.getLearned())
-                .lacked(this.getLacked())
-                .longedFor(this.getLongedFor())
-                .imageData(this.getImageDataReadDTO().toEntity())
-                .build();
-    }
+//
+//    public Post toEntity() {
+//        return Post.builder()
+//                .id(this.getId())
+//                .title(this.getTitle())
+//                .category(this.getCategory())
+//                .painter(this.getPainter())
+//                .expLanation(this.getExpLanation())
+//                .learned(this.getLearned())
+//                .lacked(this.getLacked())
+//                .longedFor(this.getLongedFor())
+//                .imageData(this.getImageDataReadDTO().toEntity())
+//                .build();
+//    }
 }

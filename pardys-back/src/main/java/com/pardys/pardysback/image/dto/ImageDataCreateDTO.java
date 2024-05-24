@@ -10,12 +10,12 @@ public class ImageDataCreateDTO {
     private String type;
     private byte [] imageData;
 
-
-
-    @Operation(
-            summary = "ImageDataCreateDTO -> ImageData",
-            description = "readDTO를 entity로 변환합니다"
-    )
+//
+//
+//    @Operation(
+//            summary = "ImageDataCreateDTO -> ImageData",
+//            description = "readDTO를 entity로 변환합니다"
+//    )
     public ImageData toEntity() {
         return ImageData.builder()
                 .name(this.name)
