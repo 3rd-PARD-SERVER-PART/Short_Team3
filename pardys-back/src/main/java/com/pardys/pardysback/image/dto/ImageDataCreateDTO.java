@@ -1,6 +1,7 @@
 package com.pardys.pardysback.image.dto;
 
 import com.pardys.pardysback.image.entity.ImageData;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.Getter;
 
 @Getter
@@ -11,6 +12,10 @@ public class ImageDataCreateDTO {
 
 
 
+    @Operation(
+            summary = "ImageDataCreateDTO -> ImageData",
+            description = "readDTO를 entity로 변환합니다"
+    )
     public ImageData toEntity() {
         return ImageData.builder()
                 .name(this.name)

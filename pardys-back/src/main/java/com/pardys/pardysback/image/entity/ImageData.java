@@ -2,6 +2,7 @@ package com.pardys.pardysback.image.entity;
 
 import com.pardys.pardysback.image.dto.ImageDataCreateDTO;
 import com.pardys.pardysback.image.dto.ImageDataReadDTO;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.persistence.*;
 import lombok.*;
 //import org.example.pard.member.dto.MemberCreateDTO;
@@ -30,30 +31,24 @@ public class ImageData {
     @Column(name = "imagedata", length = 20000000)
     private byte[] imageData;
 
-    public ImageData toEntity(/*ImageDataCreateDTO dto*/){
+
+    @Operation(
+            summary = "ImageDataReadDTO -> ImageData",
+            description = "ImageDataReadDTO를 ImageData 변환합니다"
+    )
+    public ImageData toEntity(){
         return ImageData.builder()
                 .name(this.getName())
                 .type(this.getType())
                 .imageData(this.getImageData())
                 .build();
-
-//        return ImageData.builder()
-//                .name(dto.getName())
-//                .type(dto.getType())
-//                .imageData(dto.getImageData())
-//                .build();
     }
-
-//    public ImageDataReadDTO toDTO() {
-//
-//
-//    }
 
 
     public ImageDataReadDTO toDTO(){
         return ImageDataReadDTO.builder()
-//                .name(this.getName())
-//                .type(this.getType())
+                .name(this.getName())
+                .type(this.getType())
                 .imageData(this.getImageData())
                 .build();
     }

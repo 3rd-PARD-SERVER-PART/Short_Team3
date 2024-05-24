@@ -1,5 +1,6 @@
 package com.pardys.pardysback.post.entity;
 
+
 import com.pardys.pardysback.image.entity.ImageData;
 import com.pardys.pardysback.post.dto.PostReadDTO;
 import jakarta.persistence.*;
@@ -48,7 +49,8 @@ public class Post {
                 .learned(this.getLearned())
                 .lacked(this.getLacked())
                 .longedFor(this.getLongedFor())
-                .imageDataReadDTO(this.getImageData().toEntity().toDTO())
+                .imageDataReadDTO(this.getImageData().toDTO())
                 .build();
     }
+
 }
