@@ -9,7 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/user")
 public class UserController {
-    @PostMapping
+
+
+    @PostMapping("")
+    public String creatUpdate(){
+
+        return "완료";
+    }
+
+
 
 
 }
