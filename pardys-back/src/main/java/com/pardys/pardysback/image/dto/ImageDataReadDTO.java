@@ -37,7 +37,7 @@ public class ImageDataReadDTO {
                 .build();
     }
 
-//
+    //
 //    @Operation(
 //            summary = "ImageDataReadDTO -> ImageData",
 //            description = "ImageDataReadDTO를 ImageData 변환합니다"

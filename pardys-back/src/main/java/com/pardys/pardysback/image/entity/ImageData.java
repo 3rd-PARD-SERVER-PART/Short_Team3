@@ -9,7 +9,6 @@ import lombok.*;
 //import org.example.pard.member.dto.MemberCreateDTO;
 
 
-
 @Entity
 @Table(name = "imageData")
 @Getter
@@ -32,8 +31,8 @@ public class ImageData {
     @Column(name = "imagedata", length = 20000000)
     private byte[] imageData;
 
-//    ??
-    public ImageData toEntity(){
+    //    ??
+    public ImageData toEntity() {
         return ImageData.builder()
                 .name(this.getName())
                 .type(this.getType())
@@ -41,11 +40,11 @@ public class ImageData {
                 .build();
     }
 
-//    @Operation(
+    //    @Operation(
 //            summary = "entity -> ImageDataReadDTO",
 //            description = "ImageData Entity를 ImageDataReadDTO로 변환합니다"
 //    )
-    public ImageDataReadDTO toDTO(){
+    public ImageDataReadDTO toDTO() {
         return ImageDataReadDTO.builder()
                 .name(this.getName())
                 .type(this.getType())

@@ -8,9 +8,9 @@ import lombok.Getter;
 public class ImageDataCreateDTO {
     private String name;
     private String type;
-    private byte [] imageData;
+    private byte[] imageData;
 
-//
+    //
 //
 //    @Operation(
 //            summary = "ImageDataCreateDTO -> ImageData",

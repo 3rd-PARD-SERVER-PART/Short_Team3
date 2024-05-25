@@ -22,8 +22,6 @@ public class ImageDataController {
     private ImageDataService imageDataService;
 
 
-
-
     @Operation(
             summary = "사진 등록",
             description = "DB에 사진을 등록하고 저장된 사진의 ID 값을 리턴합니다",
@@ -54,7 +52,6 @@ public class ImageDataController {
 //    }
 
 
-
     @Operation(
             summary = "사진 받아오기",
             description = "DB에서 ID값으로 사진을 가져옵니다",
@@ -63,7 +60,7 @@ public class ImageDataController {
             }
     )
     @GetMapping("/{id}")
-    public ResponseEntity<?> getImageById(@PathVariable("id") Long id){
+    public ResponseEntity<?> getImageById(@PathVariable("id") Long id) {
         byte[] image = imageDataService.getImage(id);
 
         System.out.println("in id get image by id mapping");
